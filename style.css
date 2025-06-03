@@ -1,0 +1,229 @@
+/* CONFIG PADRÃO */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family:  "Montserrat", serif;
+}
+
+body {
+  background-color: #f8f8f8;
+}
+
+main {
+  margin: 3rem 7rem;
+}
+
+header {
+  background-color: #02A28F;
+  display: flex;
+  align-items: center;
+  padding: 1.5rem 0;
+}
+
+header h1 {
+  padding-left: 8rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+}
+
+/* GRID PRINCIPAL */
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 80%;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+/* PRIMEIRA COLUNA */
+.primeiraColuna {
+  display: flex;
+  flex-direction: column;
+}
+
+#imagemPrincipal {
+  margin-bottom: 1rem;
+}
+
+#imagemPrincipal img {
+  width: 100%;
+  object-fit: contain;
+  border-radius: 1rem;
+}
+
+/* POSTS RECENTES */
+.containerPostsRecentes .navPosts {
+  background-color: #02A28F;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.navPosts h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+}
+
+.navPosts a {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
+}
+
+.navPosts a:hover {
+  text-decoration: underline;
+}
+
+#postsRecentes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+#postsRecentes img {
+  width: 100%;
+  border-radius: 1rem;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* SEGUNDA COLUNA */
+.segundaColuna {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#titlePopular {
+  background-color: #02A28F;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+#titlePopular h3 {
+  color: white;
+  font-size: 1.3rem;
+}
+
+#imgColuna2 img {
+  width: 100%;
+  border-radius: 1rem;
+  margin-top: 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ARTICLE - CATEGORIAS */
+#titleArticle {
+  background-color: #02A28F;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-top: 2rem;
+}
+
+#titleArticle h3 {
+  color: white;
+  font-size: 1.3rem;
+}
+
+#textArticle {
+  margin-top: 1rem;
+}
+
+.categorias {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.categorias p {
+  text-transform: capitalize;
+}
+
+/* FOOTER */
+footer {
+  background-color: #02A28F;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+footer p {
+  color: white;
+  font-size: 0.9rem;
+}
+
+/* ========== RESPONSIVIDADE ========== */
+
+@media (max-width: 1024px) {
+  main {
+    margin: 2rem 4rem;
+  }
+
+  header h1 {
+    padding-left: 4rem;
+  }
+
+  .container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  header h1 {
+    padding-left: 0;
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    width: 90%;
+  }
+
+  .segundaColuna {
+    margin-left: 0;
+  }
+
+  #postsRecentes {
+    grid-template-columns: 1fr;
+  }
+
+  .categorias {
+    flex-direction: row;
+  }
+
+  main {
+    margin: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .navPosts h2 {
+    font-size: 1.2rem;
+  }
+
+  .navPosts a {
+    font-size: 1rem;
+  }
+}
